@@ -270,20 +270,50 @@ body::after {
 }
 
 .custom-book-btn {
-  max-width: 320px;
-  width: 100%;
+  position: relative;
+  width: 240px;
   height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 0 auto;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .custom-book-btn:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  filter: brightness(1.05);
 }
 
-@keyframes shine {
-  0% { background-position: 0% }
-  100% { background-position: 200% }
+.custom-book-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  transform: skewX(-20deg);
+  opacity: 0;
+}
+
+.custom-book-btn:hover::after {
+  animation: shine-move 0.8s ease-in-out;
+  opacity: 1;
+}
+
+@keyframes shine-move {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
 }
