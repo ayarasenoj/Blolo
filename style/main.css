@@ -146,3 +146,45 @@
   line-height: 1.6;
   border-top: 3px solid #c8102e;
 }
+
+body {
+  background: linear-gradient(to bottom, #c8102e 0%, #000000 60%);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Shimmer layer (faint iridescent lightplay) */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(60deg, rgba(255,0,150,0.04), rgba(0,255,255,0.04));
+  pointer-events: none;
+  z-index: -1;
+  
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(60deg, rgba(255,0,150,0.05), rgba(0,255,255,0.05));
+  background-size: 300% 300%;
+  animation: shimmerMove 20s infinite linear;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+@keyframes shimmerMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
