@@ -269,6 +269,20 @@ body::after {
   background-size: 300%;
 }
 
+.custom-book-btn {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.custom-book-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+}
+
 @keyframes shine {
   0% { background-position: 0% }
   100% { background-position: 200% }
