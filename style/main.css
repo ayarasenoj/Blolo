@@ -418,7 +418,18 @@ body {
 
 .rip-text {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   color: white;
-  text-shadow: 2px 2px 8px black;
+  font-weight: 900;
+  text-shadow:
+    2px 2px 0 #000,
+    4px 4px 10px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(255, 0, 0, 0.4); /* subtle red glow */
+  text-align: center;
+  margin: 40px auto;
+  max-width: 90%;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, white, #ffd2d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
