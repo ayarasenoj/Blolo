@@ -378,12 +378,13 @@ body {
 /* ✅ ADD THIS: Sparkle class */
 .sparkle {
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background: radial-gradient(white 0%, transparent 60%);
+  width: 10px; /* ↑ Bigger */
+  height: 10px; /* ↑ Bigger */
+  background: radial-gradient(gold 0%, transparent 60%); /* ← Brighter & visible */
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
-  animation: sparkle 2s ease-in-out infinite;
+  animation: sparkle 2.5s ease-in-out infinite;
   z-index: 2;
+  filter: brightness(1.4) blur(0.3px); /* ← Adds a soft glow */
 }
