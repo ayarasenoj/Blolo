@@ -376,17 +376,17 @@ body {
 }
 
 /* ✅ ADD THIS: Sparkle class */
-/* 🔁 REPLACE: Sparkle class with Rose Gold version */
 .sparkle {
   position: absolute;
   width: 10px;
   height: 10px;
-  background: radial-gradient(#e5b2a0 0%, transparent 60%); /* ← Rose gold shimmer */
+  background: radial-gradient(#d88c7b 0%, transparent 60%); /* TRUE rose gold */
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
   animation: sparkle 2.5s ease-in-out infinite;
   z-index: 2;
-  filter: brightness(1.5) blur(0.4px); /* ← Glow with clarity */
+  filter: brightness(1.6) blur(0.3px);
 }
+
 
