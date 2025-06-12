@@ -405,3 +405,20 @@ body {
   z-index: 2;
   filter: brightness(1.4) blur(0.3px);
 }
+
+/* ✅ ADD: Zebra Rip Section */
+.zebra-rip {
+  background: url('../images/zebra-border.png') center center / cover no-repeat;
+  clip-path: polygon(0 20%, 10% 22%, 20% 18%, 30% 23%, 40% 17%, 50% 22%, 60% 18%, 70% 21%, 80% 16%, 90% 20%, 100% 18%, 100% 100%, 0 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.rip-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 8px black;
+}
